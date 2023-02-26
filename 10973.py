@@ -12,7 +12,7 @@ for i in range(n-1,0,-1):
                 a= False
                 break
     if a==False:
-        arr= sorted(arr[:y], reverse=True) + arr[y:]
+        arr= arr[:y] + sorted(arr[y:], reverse=True)
         print(*arr)
         break
 if a==True:
