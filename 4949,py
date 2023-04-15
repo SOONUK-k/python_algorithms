@@ -1,0 +1,37 @@
+
+
+check =0
+while(check==0):
+    queue = []
+    inputString = str(input())
+    edgecase=0
+    if(inputString=="."):
+        check=1
+        continue
+
+    for i in range(len(inputString)):
+        if(inputString[i]=="."):
+            break
+        elif(inputString[i]=="("):
+            queue.append(")")
+        elif(inputString[i]=="["):
+            queue.append("]")
+
+        elif(inputString[i]==")"):
+            edgecase = 1
+            if(len(queue) !=0 and queue[len(queue)-1]==")"):
+                queue.pop(len(queue)-1)
+                edgecase = 0
+            else:
+                break
+        elif(inputString[i]=="]"):
+            edgecase = 1
+            if(len(queue) !=0 and queue[len(queue)-1]=="]"):
+                queue.pop(len(queue)-1)
+                edgecase = 0
+            else:
+                break
+    if (len(queue)==0 and edgecase ==0):
+        print("yes")
+    else:
+        print("no")
