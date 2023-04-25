@@ -19,4 +19,5 @@ for i in range(N):
         if(i+work[i][0]<=N):
             dp[i] = work[i][1]
             index[i] = i + work[i][0]
+            
 print(max(dp))
