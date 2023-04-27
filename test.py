@@ -1,3 +1,5 @@
-
-for i in range(4,0,-1):
-    print(i)
+start = (0,0)
+print(start)
+print(type(start))
+print([start])
+print(type([start]))
